@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corner Boxes</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 220px 220px; /* box 200px + 10px border left + 10px border right */
+      grid-template-rows: 220px 220px 220px; /* वरून खाली जागा */
+      gap: 0;
+      margin: 40px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 10px solid black;
+      box-sizing: border-box;
+    }
+
+    /* पहिला बॉक्स (text + padding) */
+    .text-box {
+      padding: 20px;
+      background-color: lightseagreen;
+      color: white;
+      font-size: 14px;
+      line-height: 1.4;
+      grid-column: 1; /* पहिला column */
+      grid-row: 1;    /* पहिली row */
+    }
+
+    /* दुसरा बॉक्स (yellow) */
+    .yellow {
+      background-color: yellow;
+      grid-column: 2; /* दुसरा column */
+      grid-row: 2;    /* दुसरी row */
+    }
+
+    /* तिसरा बॉक्स (red) */
+    .red {
+      background-color: crimson;
+      grid-column: 1; /* पहिला column */
+      grid-row: 3;    /* तिसरी row */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box text-box">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Aliquam at sapien porttitor urna elementum lacinia. 
+      In id magna pulvinar, ultricies lorem id, vehicula elit. 
+      Aliquam eu luctus nisl, vitae pellentesque magna.
+      Phasellus dolor metus, laoreet ac convallis sit amet, 
+      efficitur sed dolor.
+    </div>
+
+    <div class="box yellow"></div>
+    <div class="box red"></div>
+  </div>
+
+</body>
+</html>
