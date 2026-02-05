@@ -1,4 +1,4 @@
-t1 = 'lister'
+t1 = 'listen'
 t2 = 'silent'
 if(len(t1) == len(t2)):
     l1 = list(t1)
